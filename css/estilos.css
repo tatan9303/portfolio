@@ -4,8 +4,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-#contacto,
-#inicio {
+#contacto, #inicio {
     background-image: url("../images/fondo-contacto.png");
     background-size: cover;
 }
@@ -42,10 +41,12 @@ body {
 }
 
 .foto-perfil {
-    border-radius: 600px;
-    max-width: 200px;
-    height: auto;
-
+    margin: 1em auto;
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 280px;
 }
 
 h1 {
@@ -245,9 +246,13 @@ footer .btn-whatsapp {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b82514', endColorstr='#f02f17', GradientType=1);
 }
 
+.card-tech{
+    max-height: 100%;
+    height: 184px;
+}
+
 #idiomas-hobbies{
     background-color: #eee;
-    padding-top: 50px;
 }
 
 #idiomas-hobbies .fas{
@@ -258,7 +263,17 @@ footer .btn-whatsapp {
 #idiomas-hobbies .card{
     background-color: #370a6d;
     border-radius: 15px;
-    padding: 40px 0;
+    padding: 40px;
+}
+
+.max-card{
+    max-height: 80%;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#idiomas-hobbies .card-idioma{
+    border-radius: 15px;
 }
 
 #idiomas-hobbies h2{
@@ -272,12 +287,13 @@ footer .btn-whatsapp {
     list-style-type: none;
 }
 
+
 @media (max-width: 750px) {
 
     #contacto,
     #inicio {
         background-image: url("../images/fondo-proyectos.png");
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -291,7 +307,7 @@ footer .btn-whatsapp {
         border: 1px solid #E20000;
     }
 
-    .footer, #inicio footer a, #contacto footer a, footer{
+    .footer, #inicio footer a, #contacto footer a{
         color: #E20000 !important;
         text-align: center;
     }
@@ -299,5 +315,15 @@ footer .btn-whatsapp {
     #inicio .fa-github::before,
     #contacto .fa-github::before {
         color: #E20000;
+    }
+
+    .fa-comment-alt:before, .fa-message:before{
+        content: "\f27a";
+        margin-left: -17px;
+    }
+
+    .fa-star:before {
+        content: "\f005";
+        margin-left: -25px;
     }
 }
